@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=windows-1250">
+    <title>Test</title>
+</head>
+<style>
+    body {
+        background-image: url('images/neon.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align:center
+    }
+</style>
+<body>
+<center>
+
+<form method="get" action="/add">
+    <table>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <tr>
+            <td style="color: aqua">First Number </td>
+            <td><input type="number" size="50" name="FirstNumber">
+            </td>
+        </tr>
+        <p></p>
+        <tr>
+            <td style="color: aqua">Second Number </td>
+            <td><input type="number" size="50" name="SecondNumber">
+            </td>
+        </tr>
+        <p></p>
+        <tr>
+            <td><button type="submit" formmethod="get" formaction="/add">GET</button></td>
+            <!-- <input type="submit" value="Submit"> -->
+            <td><button type="submit" formmethod="post" formaction="/add">POST</button></td>
+        </tr>
+        <tr>
+            <!-- <input type="submit" value="Submit"> -->
+        </tr>
+    </table>
+</form>
+</center>
+</body>
+</html>
