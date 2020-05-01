@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=windows-1250">
+    <title>Test</title>
+    <script src="/scripts/jquery-3.4.1.js"></script>
+    <!--<script src="/scripts/validation.js"></script>-->
+</head>
+
+<body>
+<center>
+
+
+    <form method="get" action="/add">
+        <table>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <tr>
+                <td style="color: deeppink">First Number </td>
+                <td><input id="number1" type="number" size="50" name="number1">
+                </td>
+            </tr>
+            <p></p>
+            <tr>
+                <td style="color: deeppink">Second Number </td>
+                <td><input id="number2" type="number" size="50" name="number2">
+                </td>
+            </tr>
+            <p></p>
+            <tr>
+               <td><button type="submit" formmethod="get" onclick="_get()" align="center">GET</button></td>
+                <td><button type="submit" formmethod="post" onclick="_post()" align="center">POST</button></td>
+            </tr>
+            <p></p>
+            <tr>
+               <td> <div id="sum"></div>
+               </td>
+            </tr>
+        </table>
+    </form>
+    <script src="/scripts/index.js"></script>
+</center>
+</body>
+</html>
