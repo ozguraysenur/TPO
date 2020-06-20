@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://s19358/mtom" xmlns:tns="http://s19358/mtom" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="DownloadFile" type="tns:DownloadFile"/>
+
+  <xs:element name="DownloadFileResponse" type="tns:DownloadFileResponse"/>
+
+  <xs:element name="QueryFile" type="tns:QueryFile"/>
+
+  <xs:element name="QueryFileResponse" type="tns:QueryFileResponse"/>
+
+  <xs:element name="UploadFile" type="tns:UploadFile"/>
+
+  <xs:element name="UploadFileResponse" type="tns:UploadFileResponse"/>
+
+  <xs:complexType name="QueryFile">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="QueryFileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DownloadFile">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DownloadFileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:file" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="file">
+    <xs:sequence>
+      <xs:element name="fileName" type="xs:string" minOccurs="0"/>
+      <xs:element name="fileSize" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UploadFile">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+      <xs:element name="arg1" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+      <xs:element name="arg2" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UploadFileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
